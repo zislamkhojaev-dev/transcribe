@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "transcribe-app"
+version = "0.1.0"
+description = "Offline Russian interview transcription to a timestamped TXT file."
+requires-python = ">=3.11"
+dependencies = [
+    "torch",
+    "torchaudio",
+    "transformers==4.57.6",
+    "huggingface_hub>=0.25,<1",
+    "hydra-core",
+    "omegaconf",
+    "sentencepiece",
+    "soundfile",
+    "numpy",
+    "gradio",
+    "silero-vad",
+    "pyannote.audio==4.0.7",
+    "torchcodec>=0.7",
+    "matplotlib>=3.10",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
